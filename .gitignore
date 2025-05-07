@@ -1,3 +1,5 @@
 *.log
 target/
-secondversion.html
+secondindex.html
+secondstyle.css
+secondscript.js

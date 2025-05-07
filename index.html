@@ -3,22 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Me!</title>
+    <title>Quiz Me</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="app">
-      <h1>Start Quiz</h1>
-      <div class="quiz">
-        <h2 id="question">Question will be displayed here</h2>
-        <div id="answer-buttons">
-          <button class="btn">Answer 1</button>
-          <button class="btn">Answer 2</button>
-          <button class="btn">Answer 3</button>
-          <button class="btn">Answer 4</button>
+    <div id="app">
+      <div id="start-screen">
+        <h1>Quiz Me!</h1>
+        <p>High Score: <span id="high-score">0</span></p>
+        <button id="start-btn">Start Quiz</button>
+      </div>
+
+      <div id="quiz-screen" class="hidden">        
+        <div id="progress">
+          <div id="progress-bar"></div>
         </div>
-        <button id="submit-btn">Next</button>
+        <h2 id="question-text"></h2>
+        <div id="options"></div>
+        <p id="time-left">Time left: <span id="timer">60</span> seconds</p>
+        <button id="next-btn">Submit</button>
+      </div>
+
+      <div id="result-screen" class="hidden">
+        <h2 id="score-text"></h2>
+        <h2>You took <span id="time-taken"></span> seconds.</h2>
+        <p>High Score: <span id="high-score-end">0</span></p>
+        <button id="restart-btn">Restart Quiz</button>
       </div>
     </div>
   </body>

@@ -6,10 +6,11 @@
 }
 
 body {
+    text-align: center;
     background: #001e4d;
 }
 
-.app {
+#app {
     background: #fff;
     width: 90%;
     max-width: 600px;
@@ -26,39 +27,7 @@ body {
     padding-bottom: 30px;
 }
 
-.quiz{
-    padding: 20px 0;
-}
-
-.quiz h2 {
-    font-size: 18px;
-    color: #001e4d;
-    font-weight: 600;
-}
-
-.btn{
-    background: #fff;
-    color: #222;
-    font-weight: 500;
-    width: 100%;
-    border: 1px solid #222;
-    padding: 10px;
-    margin: 10px 0;
-    text-align: left;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover:not([disabled]){
-    background: #222;
-    color: #fff;
-}
-.btn:disabled{
-    cursor: no-drop;
-}
-
-#submit-btn{
+#start-btn {
     background: #001e4d;
     color: #fff;
     font-weight: 500;
@@ -68,15 +37,112 @@ body {
     margin: 20px auto;
     border-radius: 4px;
     cursor: pointer;
+}
+
+#restart-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.quiz-screen {
+    padding: 20px 0;
     display: none;
 }
 
-.correct{
-    background: #2ecc71;
+.quiz-screen.active {
+    display: block;
+}
+
+.quiz-screen h2 {
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600;
+}
+
+#time-left {
+    color: #001e4d;
+    text-align: right;
+}
+
+#options button {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#options button:hover:not([disabled]) {
+    background: #001e4d;
     color: #fff;
 }
 
-.incorrect{
-    background: #e74c3c;
+#options button:disabled {
+    cursor: no-drop;
+}
+
+.options button:selected {
+    background: #001e4d;
     color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+#next-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#progress {
+    width: 100%;
+    background-color: #ddd;
+    margin: 1rem 0;
+}
+
+#progress-bar {
+    height: 20px;
+    background-color: #4caf50;
+    width: 0%;
+}
+
+#time-taken {
+    font-size: 24px;
+    color: #001e4d;
+    font-weight: 600;
+}
+
+.fade {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
